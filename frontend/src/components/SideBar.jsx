@@ -2,7 +2,7 @@ import React from 'react'
 import useAuthUser from '../hooks/useAuthUser';
 import { Link, useLocation } from 'react-router';
 import {BellIcon, HomeIcon, ShipWheelIcon, UsersIcon } from 'lucide-react';
-import logoImage from "../assets/QPMess_Logo.png";
+import logoImage from "../assets/QPMess_logo.png";
 
 const SideBar = () => {
 
