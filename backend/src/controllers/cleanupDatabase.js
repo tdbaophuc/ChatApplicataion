@@ -12,7 +12,7 @@ async function cleanup() {
 
     // XÓA TẤT CẢ FRIEND REQUESTS
     const result = await FriendRequest.deleteMany({});
-    console.log(`✅ Đã xóa TẤT CẢ ${result.deletedCount} friend requests`);
+    console.log(`Đã xóa TẤT CẢ ${result.deletedCount} friend requests`);
 
     const count = await FriendRequest.countDocuments();
     console.log(`Còn lại ${count} friend requests trong DB`);
