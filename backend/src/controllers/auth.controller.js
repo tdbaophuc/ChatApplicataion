@@ -26,7 +26,8 @@ export async function signup(req, res) {
     }
 
     const idx = Math.floor(Math.random() * 100) + 1; // generate a num between 1-100
-    const randomAvatar = `https://avatar.iran.liara.run/public/${idx}.png`;
+    // Dùng dịch vụ UI Avatars (ổn định hơn)
+    const randomAvatar = `https://ui-avatars.com/api/?name=${encodeURIComponent(fullName)}&background=random`;
 
     const newUser = await User.create({
       email,

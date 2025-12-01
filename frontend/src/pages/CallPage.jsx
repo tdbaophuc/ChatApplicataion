@@ -36,8 +36,10 @@ const CallPage = () => {
   });
 
   useEffect(() => {
+    let videoClient;
+
     const initCall = async () => {
-      if (!tokenData.token || !authUser || !callId) return;
+      if (!tokenData?.token || !authUser || !callId) return;
 
       try {
         console.log("Initializing Stream video client...");
@@ -48,7 +50,7 @@ const CallPage = () => {
           image: authUser.profilePic,
         };
 
-        const videoClient = new StreamVideoClient({
+        videoClient = new StreamVideoClient({
           apiKey: STREAM_API_KEY,
           user,
           token: tokenData.token,
@@ -71,6 +73,15 @@ const CallPage = () => {
     };
 
     initCall();
+
+    return () => {
+      if (videoClient) {
+        console.log("Disconnecting user...");
+        videoClient.disconnectUser(); // Ngắt kết nối khi rời trang hoặc re-render
+        setClient(null);
+        setCall(null);
+      }
+    };
   }, [tokenData, authUser, callId]);
 
   if (isLoading || isConnecting) return <PageLoader />;
