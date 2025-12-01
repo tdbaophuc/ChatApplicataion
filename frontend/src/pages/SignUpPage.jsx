@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { ShipWheelIcon } from "lucide-react";
 import { Link } from "react-router";
-import useSignUp from "../hooks/useSignup";
-import logoImage from "../assets/QPMess_Logo.png";
+import useSignUp from "../hooks/useSignUp";
+import logoImage from "../assets/QPMess_logo.png";
 
 
 const SignUpPage = () => {
