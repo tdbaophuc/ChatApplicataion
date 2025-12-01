@@ -2,7 +2,7 @@ import { useState } from "react";
 import { ShipWheelIcon } from "lucide-react";
 import { Link } from "react-router";
 import useLogin from "../hooks/useLogin";
-import logoImage from "../assets/QPMess_Logo.png";
+import logoImage from "../assets/QPMess_logo.png";
 
 const LoginPage = () => {
   const [loginData, setLoginData] = useState({
