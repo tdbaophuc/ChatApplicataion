@@ -14,7 +14,7 @@ const PORT = process.env.PORT
 
 app.use(
     cors({
-        origin: ["http://localhost:5173", "http://localhost:5174"], // URL của frontend
+        origin: ["http://localhost:5173", "https://qp-mess.vercel.app"], // URL của frontend
         credentials: true, // approve gửi cookie từ frontend
     })
 )
